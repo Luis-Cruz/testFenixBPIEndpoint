@@ -30,18 +30,35 @@ public class DoSomeStuff {
             final String degreeType = bean.getDegreeType();
             final String district = bean.getDistrict();
             final String fiscal = bean.getFiscal();
-            final int gender = bean.getGender();
+            final char gender = (char) bean.getGender();
             final String id = bean.getId();
             final String idDocumentNumber = bean.getIdDocumentNumber();
             final String idDocumentValidity = bean.getIdDocumentValidity();
-            final List<Integer> nationality = bean.getNationality();
+            final String nationality = bean.getNationality();
             final String phone = bean.getPhone();
-            final List<Integer> placeOfBirth = bean.getPlaceOfBirth();
+            final String placeOfBirth = bean.getPlaceOfBirth();
             final String streetLayoutCode = bean.getStreetLayoutCode();
             final String zipCode = bean.getZipCode();
             final byte[] enrolmentAgreement = bean.getEnrolmentAgreement();
 
             System.out.println("Found user: " + email + " a.k.a.: " + name);
+            System.out.println("   address: " + address);
+            System.out.println("   borough: " + borough);
+            System.out.println("   county: " + county);
+            System.out.println("   dateOfBirth: " + dateOfBirth);
+            System.out.println("   degree: " + degree);
+            System.out.println("   degreeType: " + degreeType);
+            System.out.println("   district: " + district);
+            System.out.println("   fiscal: " + fiscal);
+            System.out.println("   gender: " + gender);
+            System.out.println("   id: " + id);
+            System.out.println("   idDocumentNumber: " + idDocumentNumber);
+            System.out.println("   idDocumentValidity: " + idDocumentValidity);
+            System.out.println("   nationality: " + nationality);
+            System.out.println("   phone: " + phone);
+            System.out.println("   placeOfBirth: " + placeOfBirth);
+            System.out.println("   streetLayoutCode: " + streetLayoutCode);
+            System.out.println("   zipCode: " + zipCode);
         } catch (final BPISyncException_Exception e) {
             throw new Error("Should not have failed");
         }

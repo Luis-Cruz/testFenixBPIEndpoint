@@ -1,11 +1,8 @@
 
 package pt.ist.fenixedu.bpi.webservice;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
@@ -35,9 +32,9 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="idDocumentNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="idDocumentValidity" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="nationality" type="{http://www.w3.org/2001/XMLSchema}unsignedShort" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="nationality" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="placeOfBirth" type="{http://www.w3.org/2001/XMLSchema}unsignedShort" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="placeOfBirth" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="streetLayoutCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="zipCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
@@ -89,13 +86,9 @@ public class BpiSyncBean {
     protected String idDocumentNumber;
     protected String idDocumentValidity;
     protected String name;
-    @XmlElement(nillable = true)
-    @XmlSchemaType(name = "unsignedShort")
-    protected List<Integer> nationality;
+    protected String nationality;
     protected String phone;
-    @XmlElement(nillable = true)
-    @XmlSchemaType(name = "unsignedShort")
-    protected List<Integer> placeOfBirth;
+    protected String placeOfBirth;
     protected String streetLayoutCode;
     protected String zipCode;
 
@@ -452,30 +445,25 @@ public class BpiSyncBean {
     /**
      * Gets the value of the nationality property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the nationality property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getNationality().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Integer }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public List<Integer> getNationality() {
-        if (nationality == null) {
-            nationality = new ArrayList<Integer>();
-        }
-        return this.nationality;
+    public String getNationality() {
+        return nationality;
+    }
+
+    /**
+     * Sets the value of the nationality property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNationality(String value) {
+        this.nationality = value;
     }
 
     /**
@@ -505,30 +493,25 @@ public class BpiSyncBean {
     /**
      * Gets the value of the placeOfBirth property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the placeOfBirth property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPlaceOfBirth().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Integer }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public List<Integer> getPlaceOfBirth() {
-        if (placeOfBirth == null) {
-            placeOfBirth = new ArrayList<Integer>();
-        }
-        return this.placeOfBirth;
+    public String getPlaceOfBirth() {
+        return placeOfBirth;
+    }
+
+    /**
+     * Sets the value of the placeOfBirth property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPlaceOfBirth(String value) {
+        this.placeOfBirth = value;
     }
 
     /**
