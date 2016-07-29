@@ -3,7 +3,6 @@ package pt.ist.fenixedu.bpi.webservice;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -27,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="enrolmentAgreement" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
  *         &lt;element name="fiscal" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="gender" type="{http://www.w3.org/2001/XMLSchema}unsignedShort"/>
+ *         &lt;element name="gender" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="idDocumentNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="idDocumentValidity" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -80,8 +79,7 @@ public class BpiSyncBean {
     protected String email;
     protected byte[] enrolmentAgreement;
     protected String fiscal;
-    @XmlSchemaType(name = "unsignedShort")
-    protected int gender;
+    protected String gender;
     protected String id;
     protected String idDocumentNumber;
     protected String idDocumentValidity;
@@ -333,16 +331,24 @@ public class BpiSyncBean {
     /**
      * Gets the value of the gender property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getGender() {
+    public String getGender() {
         return gender;
     }
 
     /**
      * Sets the value of the gender property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setGender(int value) {
+    public void setGender(String value) {
         this.gender = value;
     }
 

@@ -1,7 +1,5 @@
 package pt.ist.fenixedu.bpi;
 
-import java.util.List;
-
 import pt.ist.fenixedu.bpi.webservice.BPISyncException_Exception;
 import pt.ist.fenixedu.bpi.webservice.BPISyncWebService;
 import pt.ist.fenixedu.bpi.webservice.BPISyncWebServiceService;
@@ -30,7 +28,7 @@ public class DoSomeStuff {
             final String degreeType = bean.getDegreeType();
             final String district = bean.getDistrict();
             final String fiscal = bean.getFiscal();
-            final char gender = (char) bean.getGender();
+            final String gender = bean.getGender();
             final String id = bean.getId();
             final String idDocumentNumber = bean.getIdDocumentNumber();
             final String idDocumentValidity = bean.getIdDocumentValidity();
